@@ -1,9 +1,9 @@
-// FUNCTION TO GET THE USER CHOSE
+// FUNCTION TO GET THE USER CHOICE
 const getUserChoice = function () {
   return prompt("Infomr you chose: ROCK PAPER or CSISSOR").toLocaleLowerCase();
 };
 
-// FUNCTION TO GET THE COMPUTER CHOSE
+// FUNCTION TO GET THE COMPUTER CHOICE
 const items = ["Paper", "Rock", "Scissor"];
 const getComputerSelection = function () {
   return items[Math.floor(Math.random() * items.length)].toLocaleLowerCase();
@@ -31,4 +31,10 @@ const playRound = function (
   }
 };
 
-console.log(playRound());
+// FUNCTION TO PLAY THE GAME FIVE TIMES
+const game = function () {
+  for (let i = 0; i <= 4; i++) {
+    console.log(playRound());
+  }
+};
+game();
