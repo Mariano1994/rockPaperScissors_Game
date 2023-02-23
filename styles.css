@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121214;
+  color: #fff;
+  font-family: "Ubunto", sans-serif;
+}
+
+.wrap-content {
+  position: absolute;
+  height: 65%;
+  width: 60%;
+  background: #27272a;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.game-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-seleciton-wrap {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.game-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-selection a {
+  text-decoration: none;
+  font-size: 6.5rem;
+  margin-top: 6rem;
+  transition: all 0.1s;
+}
+
+.game-selection a:hover {
+  transform: scale(1.1);
+}
+
+.game-selection p {
+  font-size: 1.2rem;
+  color: #f6efa6;
+  font-weight: bold;
+}
+.game-selection:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+
+  font-size: 2rem;
+  color: #f6efa6;
+  font-weight: bold;
+}
