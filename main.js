@@ -4,12 +4,12 @@ const getUserChoice = function () {
 };
 
 // FUNCTION TO GET THE COMPUTER CHOICE
-const items = ["Paper", "Rock", "Scissor"];
+const items = ["Paper", "Rock", "Csissor"];
 const getComputerSelection = function () {
   return items[Math.floor(Math.random() * items.length)].toLocaleLowerCase();
 };
 
-// FUNCTION TO PLAY HE GAME
+// FUNCTION TO PLAY THE GAME
 const playRound = function (
   computer = getComputerSelection(),
   user = getUserChoice()
@@ -33,8 +33,6 @@ const playRound = function (
 
 // FUNCTION TO PLAY THE GAME FIVE TIMES
 const game = function () {
-  for (let i = 0; i <= 4; i++) {
-    console.log(playRound());
-  }
+  console.log(playRound());
 };
 game();
