@@ -73,3 +73,7 @@ body {
   color: #f6efa6;
   font-weight: bold;
 }
+
+span {
+  display: none;
+}
