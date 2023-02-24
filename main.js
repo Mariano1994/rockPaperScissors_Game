@@ -57,6 +57,7 @@ function playRound() {
         result.textContent = ` Tied`;
       }
 
+      // CHECKING THE WINNER
       if (userConter == 5) {
         result.textContent = `You Won the Game!!`;
       } else if (computerConter === 5) {
