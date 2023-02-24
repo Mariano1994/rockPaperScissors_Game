@@ -1,5 +1,7 @@
 // SELECTING RESULT ELEMENT
 const result = document.querySelector(".result");
+let userConter = 0;
+let computerConter = 0;
 
 // FUNCTION TO GET THE COMPUTER CHOICE
 const items = ["Paper", "Rock", "Csissor"];
@@ -16,57 +18,43 @@ function playRound() {
 
       // CHECKING SELECTION
       if (userChoice === "rock" && getComputerSelection() === "csissor") {
-        result.textContent = `You won ${userChoice.toUpperCase()} beats CSISSOR!`;
+        userConter++;
+        result.textContent = `${userChoice.toUpperCase()} beats CSISSOR!`;
       } else if (userChoice === "paper" && getComputerSelection() === "rock") {
-        result.textContent = `You won ${userChoice.toUpperCase()} beats ROCK!`;
+        userConter++;
+        result.textContent = `${userChoice.toUpperCase()} beats ROCK!`;
       } else if (
         userChoice === "csissor" &&
         getComputerSelection() === "paper"
       ) {
-        result.textContent = `You won ${userChoice.toUpperCase()} beats PAPER!`;
+        userConter++;
+        result.textContent = `${userChoice.toUpperCase()} beats PAPER!`;
       } else if (
         getComputerSelection() === "rock" &&
         userChoice === "csissor"
       ) {
-        result.textContent = `You lose ROCK beats ${userChoice}`;
+        computerConter++;
+        result.textContent = ` ROCK beats ${userChoice.toUpperCase()}`;
       } else if (getComputerSelection() === "paper" && userChoice === "rock") {
-        result.textContent = `You lose PAPER beats ${userChoice}`;
+        computerConter++;
+        result.textContent = ` PAPER beats ${userChoice.toUpperCase()}`;
       } else if (
         getComputerSelection() === "csissor" &&
         userChoice === "paper"
       ) {
-        result.textContent = `You lose CSISSOR beats ${userChoice}`;
+        computerConter++;
+        result.textContent = `CSISSOR beats ${userChoice.toUpperCase()}`;
       } else {
         result.textContent = ` Tied`;
+      }
+
+      if (userConter == 5) {
+        result.textContent = `You Woonn the Game!!`;
+      } else if (computerConter === 5) {
+        result.textContent = `You lose the game`;
       }
     });
   });
 }
 
-// // FUNCTION TO PLAY THE GAME
-// const playRound = function (
-//   computer = getComputerSelection(),
-//   user = getUserChoice()
-// ) {
-//   if (user === "rock" && computer === "csissor") {
-//     return `You Won! ${user} beats ${computer}`;
-//   } else if (user === "paper" && computer === "rock") {
-//     return `You Won! ${user} beats ${computer}`;
-//   } else if (user === "csissor" && computer === "paper") {
-//     return `You Won! ${user} beats ${computer}`;
-//   } else if (computer === "rock" && user === "csissor") {
-//     return `You Lost! ${computer} beats ${user}`;
-//   } else if (computer === "paper" && user === "rock") {
-//     return `You Lost! ${computer} beats ${user}`;
-//   } else if (computer === "csissor" && user === "paper") {
-//     return `You Lost! ${computer} beats ${user}`;
-//   } else {
-//     return "Tied";
-//   }
-// };
-
-// // FUNCTION TO PLAY THE GAME FIVE TIMES
-// const game = function () {
-//   console.log(playRound());
-// };
-// game();
+playRound();
